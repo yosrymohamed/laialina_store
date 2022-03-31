@@ -6,7 +6,9 @@
 .contianer {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'home' 'work' 'c';
+      grid-template-areas: 'home'
+ 'work'
+ 'c';
   grid-auto-rows: minmax(200px, auto);
 }
 
@@ -114,7 +116,7 @@
 
 .upButton {
   position: fixed;
-  bottom: 0px;
+  bottom: 35px;
   right: 10px;
   font-size: 44px;
   -webkit-transition: .5s color;
