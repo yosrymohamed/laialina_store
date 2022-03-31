@@ -1,0 +1,242 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.contianer {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'home' 'work' 'c';
+  grid-auto-rows: minmax(200px, auto);
+}
+
+.contianer .home {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: home;
+}
+
+.contianer .work {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: work;
+}
+
+.contianer .contnet {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: c;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1000px;
+  background-color: #af04ff;
+}
+
+.home div {
+  background-color: saddlebrown;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 20px solid black;
+  -webkit-animation: home_photo 15s infinite;
+          animation: home_photo 15s infinite;
+  -webkit-transition: 1s border;
+  transition: 1s border;
+  cursor: pointer;
+}
+
+.home div img {
+  width: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.home div:hover {
+  border: 20px solid black;
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes home_photo {
+  10% {
+    border: 20px solid red;
+  }
+  30% {
+    border: 20px solid #0011ff;
+  }
+  50% {
+    border: 20px solid #ffe600;
+  }
+  70% {
+    border: 20px solid #00ffb3;
+  }
+  90% {
+    border: 20px solid #00ff15;
+  }
+}
+
+@keyframes home_photo {
+  10% {
+    border: 20px solid red;
+  }
+  30% {
+    border: 20px solid #0011ff;
+  }
+  50% {
+    border: 20px solid #ffe600;
+  }
+  70% {
+    border: 20px solid #00ffb3;
+  }
+  90% {
+    border: 20px solid #00ff15;
+  }
+}
+
+.upButton {
+  position: fixed;
+  bottom: 0px;
+  right: 10px;
+  font-size: 44px;
+  -webkit-transition: .5s color;
+  transition: .5s color;
+  display: none;
+}
+
+.upButton:hover {
+  color: white;
+}
+
+.work {
+  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(white), to(#af04ff));
+  background: linear-gradient(to top, white, white, #af04ff);
+  min-height: 970px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.work div {
+  background-color: wheat;
+  width: 400px;
+  height: 400px;
+  border-radius: 59px 59px 11px 59px;
+  margin: 80px 70px;
+}
+
+.work div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 59px 59px 11px 59px;
+}
+
+.content {
+  position: relative;
+}
+
+.content div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background-color: black;
+}
+
+.content div p {
+  color: white;
+  font-size: 24px;
+  margin: 10px 20px;
+  font-family: sans-serif;
+}
+
+.content div p a {
+  color: red;
+}
+
+.myP {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 18px;
+}
+
+@media all and (max-width: 425px) {
+  .home div {
+    width: 400px;
+    height: 400px;
+  }
+  .content div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .content div p {
+    font-size: 15px;
+  }
+}
+
+@media all and (min-width: 425px) and (max-width: 769px) {
+  .home div {
+    width: 425px;
+    height: 425px;
+  }
+  .content div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .content div p {
+    font-size: 15px;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 1200px) {
+  .content div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .content div p {
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
